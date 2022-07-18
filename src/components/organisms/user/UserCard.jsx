@@ -1,7 +1,13 @@
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { UserContext } from "../../../providers/UserProvider";
 import { Card } from "../../atoms/card/Card";
 export const UserCard = (props) => {
   const { user } = props;
+
+  const context = useContext(UserContext);
+  console.log(context);
+
   return (
     <Card>
       <img height={160} width={160} src={user.image} alt={user.name} />
